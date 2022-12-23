@@ -1,8 +1,8 @@
 import pvporcupine
-import wave
+#import wave
 import recorder
-import numpy
-import deepspeech
+#import numpy
+#import deepspeech
 import time
 import pygame
 import os, random
@@ -39,36 +39,36 @@ class GhostTest():
         self.pv_leopard = pvleopard.create(access_key=Config.AccessKey, model_path=Config.L_model_path)
 
         #deepspeech setup
-        self.model = deepspeech.Model(Config.DS_model_file_path)
-        self.model.enableExternalScorer(Config.DS_scorer_file_path)
+        #self.model = deepspeech.Model(Config.DS_model_file_path)
+        #self.model.enableExternalScorer(Config.DS_scorer_file_path)
 
-        lm_alpha = 0.75
-        lm_beta = 1.85
-        self.model.setScorerAlphaBeta(lm_alpha, lm_beta)
+        #lm_alpha = 0.75
+        #lm_beta = 1.85
+        #self.model.setScorerAlphaBeta(lm_alpha, lm_beta)
 
-        beam_width = 500
-        self.model.setBeamWidth(beam_width)
+        #beam_width = 500
+        #self.model.setBeamWidth(beam_width)
 
         #deepspeech hotword boosting
-        self.model.addHotWord("Ghost", 20)
-        self.model.addHotWord("Fallen", 20)
-        self.model.addHotWord("Cabal", 20)
-        self.model.addHotWord("Backs", 20)
-        self.model.addHotWord("High", 20)
+        #self.model.addHotWord("Ghost", 20)
+        #self.model.addHotWord("Fallen", 20)
+        #self.model.addHotWord("Cabal", 20)
+        #self.model.addHotWord("Backs", 20)
+        #self.model.addHotWord("High", 20)
 
     #Processes recording with DeepSpeech
-    def process_recording(self):
+    #def process_recording(self):
         #wave file setup
-        w = wave.open(self.output_path, "r")
-        frames = w.getnframes()
-        buffer = w.readframes(frames)
+        #w = wave.open(self.output_path, "r")
+        #rames = w.getnframes()
+        #buffer = w.readframes(frames)
 
         #convert buffer to 16 bit array
-        data16 = numpy.frombuffer(buffer, dtype=numpy.int16)
+        #data16 = numpy.frombuffer(buffer, dtype=numpy.int16)
 
         #process text
-        self.result_text = self.model.stt(data16)
-        w.close()
+        #self.result_text = self.model.stt(data16)
+        #w.close()
 
     #Processes recording with Leopard
     def process_recording_leopard(self):
