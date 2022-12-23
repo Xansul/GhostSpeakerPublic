@@ -115,48 +115,48 @@ class GhostTest():
                 if re.search(r"[fF]allen", self.result_text_leopard):
                     #play random file from appropriate folder
                     file_to_play = random.choice(os.listdir(Config.fallen_path))
-                    file_to_play = os.path.join(r"Resources\Dialogue\Fallen", file_to_play)
+                    file_to_play = os.path.join(r"Resources/Dialogue/Fallen", file_to_play)
                     pygame.mixer.music.load(file_to_play)
                     pygame.mixer.music.play()
 
                 elif re.search(r"[hH]ive", self.result_text_leopard):
                     #play random file from appropriate folder
                     file_to_play = random.choice(os.listdir(Config.hive_path))
-                    file_to_play = os.path.join(r"Resources\Dialogue\Hive", file_to_play)
+                    file_to_play = os.path.join(r"Resources/Dialogue/Hive", file_to_play)
                     pygame.mixer.music.load(file_to_play)
                     pygame.mixer.music.play()
 
                 elif re.search(r"[cC]abal", self.result_text_leopard):
                     #play random file from appropriate folder
                     file_to_play = random.choice(os.listdir(Config.cabal_path))
-                    file_to_play = os.path.join(r"Resources\Dialogue\Cabal", file_to_play)
+                    file_to_play = os.path.join(r"Resources/Dialogue/Cabal", file_to_play)
                     pygame.mixer.music.load(file_to_play)
                     pygame.mixer.music.play()
 
                 elif re.search(r"[vV]ex", self.result_text_leopard):
                     #play random file from appropriate folder
                     file_to_play = random.choice(os.listdir(Config.vex_path))
-                    file_to_play = os.path.join(r"Resources\Dialogue\Vex", file_to_play)
+                    file_to_play = os.path.join(r"Resources/Dialogue/Vex", file_to_play)
                     pygame.mixer.music.load(file_to_play)
                     pygame.mixer.music.play()
         
                 elif re.search(r"[sS]ay", self.result_text_leopard):
                     #play random file from appropriate folder
                     file_to_play = random.choice(os.listdir(Config.misc_path))
-                    file_to_play = os.path.join(r"Resources\Dialogue\Misc", file_to_play)
+                    file_to_play = os.path.join(r"Resources/Dialogue/Misc", file_to_play)
                     pygame.mixer.music.load(file_to_play)
                     pygame.mixer.music.play()
 
                 elif re.search(r"[gG]o", self.result_text_leopard):
                     #play random file from appropriate folder
                     file_to_play = random.choice(os.listdir(Config.going_path))
-                    file_to_play = os.path.join(r"Resources\Dialogue\GoingPlaces", file_to_play)
+                    file_to_play = os.path.join(r"Resources/Dialogue/GoingPlaces", file_to_play)
                     pygame.mixer.music.load(file_to_play)
                     pygame.mixer.music.play()
 
                 #default to random file in "Responses"
                 else:
                     file_to_play = random.choice(os.listdir(Config.responses_path))
-                    file_to_play = os.path.join(r"Resources\Dialogue\Responses", file_to_play)
+                    file_to_play = os.path.join(r"Resources/Dialogue/Responses", file_to_play)
                     pygame.mixer.music.load(file_to_play)
                     pygame.mixer.music.play()

@@ -13,6 +13,8 @@ button = DigitalInOut(board.D17)
 button.direction = Direction.INPUT
 button.pull = Pull.UP
 
+print("Ready for button input")
+
 while True:
   if not button.value:
     print("Shutting down")
