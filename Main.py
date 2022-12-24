@@ -1,5 +1,5 @@
 import pygame
-import Config
+import ConfigRaspi as cr
 import GhostTest as GS
 
 #Run except for runtime error
@@ -7,8 +7,9 @@ import GhostTest as GS
 Ghost = GS.GhostTest()
 
 #play startup file
-pygame.mixer.init(devicename = "Built-in Audio Stereo")
-pygame.mixer.music.load(Config.startup_path)
+#USES RASPBERRY PI SOUNDCARD -- DELETE DEVICENAME IF ON WINDOWS
+pygame.mixer.init(devicename = cr.card)
+pygame.mixer.music.load(cr.startup_path)
 pygame.mixer.music.play()
 
 #cleanup on keyboard interrupt
